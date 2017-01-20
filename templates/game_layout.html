@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title> {{ data.title }} </title>
+<link rel='shortcut icon' href=' {{ data.tab_img }} ' type='image/x-icon'/ >
+<style>
+.game_section{
+	border: solid;
+}
+
+iframe{
+border:solid;
+}
+
+.opinion{
+	border: solid;
+}
+
+</style>
+<body>
+	<center><h1> {{ data.title }} </h1></center>
+	<center><img src="{{ data.main_img }}" height="400" width="700"/></center>
+	<center class="game_section">
+    <b>{{ data.desc }}</b>
+	</center>
+	<center><h1>BEST MOMENTS:</h1>
+	<iframe width="600" height="300" src="{{ data.yt_url[0] }}" frameborder="0" allowfullscreen></iframe>
+	<iframe width="600" height="300" src="{{ data.yt_url[1] }}" frameborder="0" allowfullscreen></iframe>
+	<iframe width="600" height="300" src="{{ data.yt_url[2] }}" frameborder="0" allowfullscreen></iframe>
+	<h1>My Opinion:</h1>
+	<h3 class="opinion"> {{ data.opinion }}</h3></center>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<title>Trending Games</title>
+<link rel='shortcut icon' href='static\img\Joystick.png' type='image/x-icon'/ >
+<style>
+.banner{
+	border:solid;
+	border-color: black;
+	border-width:5px 5px 5px 5px;
+	background-color: gray;
+}
+
+.game_section{
+	padding-top: 0px;
+	border:solid;
+	border-color: black;
+	border-width:5px 5px 5px 5px;
+	height:300px;	
+}
+
+.game_image{
+	width:600px;
+	height:300px;
+}
+
+.readmore_link{
+	color: red;
+}
+
+.floating_objs {
+    float: left;
+}
+
+</style>
+<body>
+<header>
+	<div class="banner"> 
+	<h1> <center/> Trending Games </h1> 
+	</div>
+<header>
+
+{% for game in games %}
+	<div class="game_section">
+        <div class="floating_objs" >
+			<img class="game_image" src="{{ game.img_src }}"/>            
+        </div>
+        <h1>
+        <div class="game_desc" class="floating_objs">
+			<p > {{ game.desc }}
+			<a href="{{ game.game_url }}" class="readmore_link"> Read more... </a></p>
+        </div>
+        </h1>
+	</div>
+{% endfor %}
+    
+</body>
+</html>
